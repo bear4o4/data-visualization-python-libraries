@@ -1,7 +1,9 @@
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Step 1: Read the CSV file into a DataFrame
+
+#task 7 a
 housing_data = pd.read_csv('housing.csv')
 
 # Step 2: Group the data by 'housing_median_age' and calculate the average median house value for each age
@@ -19,11 +21,6 @@ plt.show()
 print("#####################")
 
 #task 7 b
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Step 1: Read the CSV file into a DataFrame
-housing_data = pd.read_csv('housing.csv')
 
 # Step 2: Calculate the number of rooms per household for each area
 housing_data['rooms_per_household'] = housing_data['total_rooms'] / housing_data['households']
@@ -41,12 +38,6 @@ print("#####################")
 
 #task 7 c
 
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Step 1: Read the CSV file into a DataFrame
-housing_data = pd.read_csv('housing.csv')
-
 # Step 2: Group the data by 'ocean_proximity' and calculate the total population for each group
 total_population_by_proximity = housing_data.groupby('ocean_proximity')['population'].sum().reset_index()
 
@@ -63,13 +54,6 @@ plt.show()
 print("#####################")
 
 #task 7 d
-
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Step 1: Read the CSV file into a DataFrame
-housing_data = pd.read_csv('housing.csv')
 
 # Step 2: Select only the numeric columns
 numeric_data = housing_data.select_dtypes(include=[float, int])
